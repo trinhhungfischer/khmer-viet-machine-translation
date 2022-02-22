@@ -26,7 +26,7 @@ world_size: 1
 gpu_ranks: [0]
 
 # Where to save the checkpoints
-save_model: data/run/model
+save_model: models/run/model
 save_checkpoint_steps: 1000
 train_steps: 30000
 valid_steps: 1000
