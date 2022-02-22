@@ -18,8 +18,8 @@ data:
         path_tgt: data/tgt-val-token.txt
 
 # Vocabulary files that were just created
-src_vocab: data/run2/example.vocab.src
-tgt_vocab: data/run2/example.vocab.tgt
+src_vocab: models/run2/example.vocab.src
+tgt_vocab: models/run2/example.vocab.tgt
 
 # Train on a single GPU
 world_size: 1
