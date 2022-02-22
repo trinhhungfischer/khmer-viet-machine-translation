@@ -1,0 +1,50 @@
+# khmer-viet.yaml
+
+## Where the samples will be written
+save_data: data/run/example
+## Where the vocab(s) will be written
+src_vocab: data/run/example.vocab.src
+tgt_vocab: data/run/example.vocab.tgt
+# Prevent overwriting existing files in the folder
+overwrite: True
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: data/src-train-bpe.txt
+        path_tgt: data/tgt-train-bpe.txt
+    valid:
+        path_src: data/src-val-bpe.txt
+        path_tgt: data/tgt-val-bpe.txt
+
+# Vocabulary files that were just created
+src_vocab: data/run/example.vocab.src
+tgt_vocab: data/run/example.vocab.tgt
+
+# Train on a single GPU
+world_size: 1
+gpu_ranks: [0]
+
+# Where to save the checkpoints
+save_model: data/run/model
+save_checkpoint_steps: 1000
+train_steps: 30000
+valid_steps: 1000
+
+# Model
+position_encoding: 'true'
+enc_layers: 6
+dec_layers: 6
+decoder_type: transformer
+encoder_type: transformer
+word_vec_size: 512
+rnn_size: 512
+layers: 6
+transformer_ff: 2048
+heads: 8
+
+# Batching
+queue_size: 10000
+batch_size: 4096
+valid_batch_size: 4096
+batch_type: tokens
